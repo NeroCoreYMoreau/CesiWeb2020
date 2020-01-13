@@ -1,0 +1,32 @@
+body{
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul {
+    margin: 0px;
+    padding: 0px;
+    background: tomato;
+    list-style:none;
+}
+
+.nav a {
+    padding: 1em;
+    display: block;
+    text-align:center;
+    text-decoration: none;
+}
+
+.nav .menu {
+    display: flex; /*1*/
+    flex-direction : row; /*2*/
+    justify-content: center; /*3*/
+
+}
+
+.nav{
+	dysplay: flex;
+	flex-direction : row; /*2*/
+    justify-content: left; /*3*/
+}
