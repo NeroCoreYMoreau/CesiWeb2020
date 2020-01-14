@@ -9,7 +9,8 @@
 	<meta name="keywords" content="keywords,here">
 	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<script>
+	<link rel="stylesheet" href="css/all.min.css">
+	<script >
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
 		_gaq.push(['_trackPageview']);
@@ -21,25 +22,28 @@
 		})();
 	</script>
 	<script >
-		
+		function envoyer(){
+			alert("Envoyer");
+		}
 	</script>
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
+	<header id="top">
 		<h1>Groupe Madera</h1>
+		<img src="./img/logo.png" id="logo_header" alt="logo">
 	</header>
-	<nav class="nav">
-		<img src="./img/logo.png" alt="logo">
+	<nav id="menu_nav" class="nav" >
 		<ul class="menu">
 			<li><a href="./index.html">Accueil</a></li>
+			<li><a href="./index.html#maderaGroup">Le Groupe</a></li>
+			<li><a href="./index.html#titleArticle_Skill">Nos compétences</a></li>
 			<li><a href="./index.html#structure">Notre structure</a></li>
-			<li><a href="./contact.html">Contact</a></li>
+			<li><a href="#">Contact</a></li>
 		</ul>
 	</nav>
 
-	<section id="contentMain">
-		<article id="FormContact">
+	<main id="contentMain">
 			<form action="/ma-page-de-traitement" method="post">
 				<div>
 					<label for="name">Nom :</label>
@@ -82,9 +86,8 @@
 					<textarea id="msg" name="user_message"></textarea>
 				</div>
 			</form>
-		</article>
-	</section>
-
+			<button onclick="envoyer()">Envoyer</button>
+	</main>
 	<footer>
 		<div id="lienSociaux"></div>
 	</footer>

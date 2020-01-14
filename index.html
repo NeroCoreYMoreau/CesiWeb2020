@@ -9,6 +9,7 @@
 	<meta name="keywords" content="keywords,here">
 	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/all.min.css">
 	<script >
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
@@ -23,13 +24,15 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
+	<header id="top">
 		<h1>Groupe Madera</h1>
+		<img src="./img/logo.png" id="logo_header" alt="logo">
 	</header>
 	<nav id="menu_nav" class="nav" >
-		<img src="./img/logo.png" alt="logo">
 		<ul class="menu">
 			<li><a href="#">Accueil</a></li>
+			<li><a href="#maderaGroup">Le Groupe</a></li>
+			<li><a href="#titleArticle_Skill">Nos compétences</a></li>
 			<li><a href="#structure">Notre structure</a></li>
 			<li><a href="./contact.html">Contact</a></li>
 		</ul>
@@ -37,7 +40,7 @@
 	<section id="contentMain">
 		<article id="maderaGroup">
 			<h2 id="titleArticle_maderaGroup">Le groupe Madera</h2>
-			<aside >
+			<aside>
 				<h3>Notre métier</h3>
 				<p>Le concept MADERA est orienté vers des solutions modulaires innovantes et offre des réalisations uniques de bâtiments architecturés en bois.
 					Avec MADERA, les bâtiments sont personnalisables et innovants.
@@ -78,9 +81,14 @@
 			</aside>
 		</article>
 	</section>	
-	<button><a href=#menu_nav>Haut Page</a></button>
 	<footer>
-		<div id="lienSociaux"></div>
+		<ul id="lienSociaux">
+			<a href="#">facebook</a>
+			<a href="#">twitter</a>
+			<a href="#">instagramme</a>
+			<a href="#">rss</a>
+		</ul>
+		<a id="goTop" class="button_top" href="#top"><i class="fab fa-galactic-senate"></i></a>
 	</footer>
 </body>
 </html>
