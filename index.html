@@ -10,6 +10,9 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/all.min.css">
+	<meta name="robots" content="noindex,nofollow">
+	<script src="./js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script >
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
@@ -27,23 +30,22 @@
 	<header id="top">
 		<h1>Groupe Madera</h1>
 		<img src="./img/logo.png" id="logo_header" alt="logo">
+        <a href="javascript:void(0);" class="icon_burger" onclick="burger()">
+            <i class="fas fa-ellipsis-v"></i>
+        </a>
 	</header>
-	  	<nav id="menu_nav" class="nav" role="navigation">
-	    	<div id="menuToggle">
-		     	<input type="checkbox" />
-		     	<span></span>
-		    	<span></span>
-		    <span></span>
-		    <ul class="menu">
-		      	<li><a href="#">Accueil</a></li>
-		      	<li><a href="#maderaGroup">Le Groupe</a></li>
-		      	<li><a href="#titleArticle_Skill">Nos compétences</a></li>
-		      	<li><a href="#structure">Notre structure</a></li>
-		      	<li><a href="./contact.html">Contact</a></li>
-		    </ul>
-		  </div>
-		  </nav>
+	<nav id="menu_nav" class="nav" >
+		<ul class="menu">
+			<li><a href="#">Accueil</a></li>
+			<li><a href="#maderaGroup">Le Groupe</a></li>
+			<li><a href="#titleArticle_Skill">Nos compétences</a></li>
+			<li><a href="#structure">Notre structure</a></li>
+			<li><a href="./produit.html">Nos produits</a></li>
+			<li><a href="./contact.html">Contact</a></li>
+		</ul>
+	</nav>
 	<section id="contentMain">
+		<div id="mm1" class="parallax"></div>
 		<article id="maderaGroup">
 			<h2 id="titleArticle_maderaGroup">Le groupe Madera</h2>
 			<aside>
@@ -61,8 +63,9 @@
 				L’année passée, le Groupe a réalisé un chiffre d’affaire de 200 millions d’euros et vendu 146 maisons modulaires (15% du CA réalisé).</p>
 			</aside>
 		</article>
+		<div id="mm6" class="parallax"></div>
 		<article id="Skill">
-			<h2 id="titleArticle_Skill">Nos Actions</h2>
+			<h2 id="titleArticle_Skill">Nos compétences</h2>
 			<aside>
 				<ul>
 					<li>Innovation</li>
@@ -71,7 +74,9 @@
 				</ul>
 			</aside>
 		</article>
+		<div id="mm5" class="parallax"></div>
 		<article id="structure">
+			
 			<h2 id="titleArticle_structure">Notre structure</h2>
 			<aside>
 				<p>L’entreprise est organisée autour de deux directions métier, d’une direction administrative et d’une direction générale :</p>
@@ -82,17 +87,17 @@
 					<li>Direction Commerciale</li>
 				</ul>
 				<div>
-					<img src="img/organigramme.png" alt="organigrammeImage">
+					<img id="organigramme" src="img/organigramme.png" alt="organigrammeImage">
 				</div>
 			</aside>
 		</article>
 	</section>	
 	<footer>
 		<ul id="lienSociaux">
-			<a href="#"><i class="fab fa-facebook"></i></a>
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
-			<a href="#"><i class="fas fa-rss"></i></a>
+			<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="#"><i class="fas fa-rss"></i></a></li>
 			
 		</ul>
 		<ul id="contactFooter">

@@ -5,14 +5,23 @@ body{
 	font-size: 62%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a{
 	text-decoration: none;
 	color: #056839;
 }
 
+div img{
+  width: auto;
+  height: 100%;
+}
+
 .nav ul {
-	margin: 0px;
-	padding: 0px;
+	margin: 0rem;
+	padding: 0rem;
 	background: #8dc63f;
 	list-style:none;
 }
@@ -31,164 +40,42 @@ ul a:hover {
 	padding: 1em;
 	display: block;
 	text-align:center;
+  vertical-align: center;
 	text-decoration: none;
 }
 
-  .nav .menu{
-    display: flex; /*1*/
-	flex-direction : column; /*2*/
-	justify-content: center; /*3*/
-  }
+.nav .menu{
+display: flex; /*1*/
+flex-direction : column; /*2*/
+justify-content: center; /*3*/
+}
 
 header h1 {
 	display: none;
 }
+
+article{
+  padding:1em;
+  border: 1em solid #056839;
+}
+
+aside{
+  padding-left: 1em;
+}
+
+#app{
+  width: 100%;
+  padding: 3em;
+}
+
 /************Burger menu************/
-
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+#menu_nav{
+  display: none;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+.icon_burger{
+   font-size: 2rem;
 }
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
-
 
 /************Button to top************/
 .button_top {
@@ -201,8 +88,8 @@ border-radius: 0.6rem;
 display: inline-block;
 transition: all 0.3s ease 0s;
 position: fixed;
-bottom: 10rem;
-left:90%;
+bottom: 5rem;
+left:85%;
 }
 
 .button_top:hover {
@@ -210,19 +97,60 @@ color: #404040 !important;
 font-weight: 700 !important;
 letter-spacing: 0.3rem;
 background: none;
--webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
--moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-webkit-box-shadow: 0rem 0.5rem 4rem -1rem rgba(0,0,0,0.57);
+-moz-box-shadow: 0rem 0.5rem 4rem -1rem rgba(0,0,0,0.57);
 transition: all 0.3s ease 0s;
 }
 
-/************Logo************/
-#logo_header{
-	width: 100%;
+/************Image************/
+#organigramme{
+  border: 0.1em solid black;
 }
 
+header{
+  text-align: center;
+}
+
+#logo_header{
+  width: auto;
+  height: 100%;
+}
+
+div #organigramme{
+  width:90vw ;
+}
+
+.parallax{
+  width:100%;
+  height:100vh;
+}
+
+#mm1{
+ background: url("../img/mm1.jpg")center 0 no-repeat fixed;
+}
+#mm2{
+ background: url("../img/mm2.jpg")center 0 no-repeat fixed;
+}
+#mm3{
+ background: url("../img/mm3.jpg")center 0 no-repeat fixed;
+}
+#mm4{
+ background: url("../img/mm4.jpg")center 0 no-repeat fixed;
+}
+#mm5{
+ background: url("../img/mm5.jpg")center 0 no-repeat fixed;
+}
+#mm6{
+ background: url("../img/mm6.jpg")center 0 no-repeat fixed;
+}
+
+#contentMain{
+  background:url("../img/mm7.png");
+}
 /************Grid************/
 
 header {
+    height: 10vh; 
     grid-area: header;
     }
 
@@ -240,23 +168,34 @@ footer{
 	
 body{
 	display: grid;
-    grid-template-columns: 10rem auto;;
-    grid-template-areas:
-     "menu_nav header"
-     "menu_nav content_main"
-     "menu_nav footer";
+  grid-template-columns:1fr;
+  grid-template-areas:
+    "header"
+    "menu_nav"
+    "content_main"
+    "footer";
 }
 
 /************Footer************/
 
 footer{
 	height: auto;
-	width: 100%;
 	background-color: #8dc63f;
 }
 
+footer ul{
+  display: inline-block;
+}
 
+#contactFooter li,#lienSociaux li{
+  list-style :none;
+}
 
+#lienSociaux a {
+  font-size: 3rem;
+  border-radius: 0.1em;
+  vertical-align: center;
+}
 /************Responsive 480px************/
 @media (min-width: 48rem) {
 	.nav .menu {
@@ -266,26 +205,50 @@ footer{
 		align-items: center;
 		height: 100%;
 	}
-	
+	.icon_burger{
+  display:none;
+  }
+
+  #menu_nav{
+  display: grid;
+}
+
  	body{
+    font-size: 1.5rem;
 		display: grid;
-	    grid-template-columns: 20rem auto;
+	    grid-template-columns: 1fr 3fr;
 	    grid-template-areas:
 	     "header menu_nav"
 	     "content_main content_main"
 	     "footer footer";
 	}
+
+  header{
+  text-align: left;
+}
 }
 
 @media(min-width: 102rem) {
+.nav .menu {
+    display: flex; /*1*/
+    flex-direction : row; /*2*/
+    justify-content: flex-start; /*3*/
+    align-items: center;
+    height: 100%;
+  }
+.icon_burger{
+  display:none;
+  }
+
 
   body{
-	display: grid;
-    grid-template-columns: 20rem 2fr 1fr;
-    grid-template-areas:
-     "header menu_nav menu_nav"
-     "... content_main ..."
-     "footer footer footer";
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+   "header menu_nav menu_nav"
+   "... content_main ..."
+   "footer footer footer";
  }
 }
 
